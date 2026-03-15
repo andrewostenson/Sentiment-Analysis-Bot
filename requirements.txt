@@ -1,0 +1,6 @@
+praw>=7.7.1
+transformers>=4.35.0
+torch>=2.0.0
+sentencepiece
+protobuf
+pandas>=2.0.0

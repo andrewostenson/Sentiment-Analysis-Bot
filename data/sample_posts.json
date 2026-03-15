@@ -1,0 +1,63 @@
+[
+    {
+        "id": "0001",
+        "subreddit": "cscareerquestions",
+        "title": "Likelihood of getting a job after graduating with a CS degree?",
+        "body": "Worried about the job market after graduation. How likely is it to get a job with a CS degree?",
+        "comments": [
+            "It's definitely possible, but it depends on your skills, experience, and networking. Make sure to build a strong portfolio and gain relevant experience through internships or projects.",
+            "The job market can be competitive, but there are many opportunities in tech. Focus on developing your skills and applying to a wide range of companies. Don't be discouraged by rejections, it's part of the process."
+        ]
+    },
+
+    {
+        "id": "0002",
+        "subreddit": "learnprogramming",
+        "title": "Best resources for learning Python?",
+        "body": "I'm new to programming and want to learn Python. What are some good resources to get started?",
+        "comments": [
+            "I recommend starting with the official Python documentation and tutorials. There are also many great online courses on platforms like Coursera, Udemy, and Codecademy.",
+            "You can also check out YouTube channels like Corey Schafer and freeCodeCamp for Python tutorials. Practice by working on small projects to apply what you learn."
+        ]
+    },
+    {
+        "id": "0003",
+        "subreddit": "csjobs",
+        "title": "Just got fired from my first job, what should I do next?",
+        "body": "Layoffs finally caught up to me, feeling pretty discouraged",
+        "comments": [
+            "This is what happens when the market gets oversatured, you get sold a load of bs about how great its gonna be only to find out this market has been done for for over a decade",
+            "Job market is cooked, sorry dude"
+        ]
+    },
+    {
+        "id": "0004",
+        "subreddit": "programming",
+        "title": "Is computer science a good major?",
+        "body": "I'm considering majoring in computer science, but I'm not sure if it's the right choice. What are the pros and cons of studying CS?",
+        "comments": [
+            "Pick anything else man. You'll be happier",
+            "I wish someone had told me to pick something else. Been 2 years and I still can't find a job. The market is really tough right now."
+        ]
+    },
+    {
+        "id": "0005",
+        "subreddit": "technology",
+        "title": "I'm a vibe coder, AMA",
+        "body": "I just vibe code all day, ask me anything about my experience or the lifestyle!",
+        "comments": [
+            "People like you are what's wrong with the industry. Stop being a leech and actually contribute something meaningful.",
+            "Don't listen to everyone here, it doesn't actually matter. Just do you and keep vibing. The market is tough but if you're happy, that's all that matters."
+        ]
+    },
+    {
+        "id": "0006",
+        "subreddit": "csprojects",
+        "title": "What are some good project ideas for a CS student?",
+        "body": "I'm looking for some project ideas to work on as a CS student. Any suggestions?",
+        "comments": [
+            "Awesome! Glad to see someone taking some initivative in this degree!",
+            "Congrats man, glad to see you working hard!"
+        ]
+    }
+]
