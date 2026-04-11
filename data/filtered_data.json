@@ -3,60 +3,126 @@
         "subreddit": "cscareerquestions",
         "title": "Likelihood of getting a job after graduating with a CS degree?",
         "sentiment": [
-            {
-                "label": "neutral",
-                "score": 0.9168084859848022
-            }
-        ]
+            [
+                {
+                    "label": "neutral",
+                    "score": 0.9168084859848022
+                },
+                {
+                    "label": "negative",
+                    "score": 0.04178192466497421
+                },
+                {
+                    "label": "positive",
+                    "score": 0.041409578174352646
+                }
+            ]
+        ],
+        "timestamp": "2024-06-01T12:00:00Z"
     },
     {
         "subreddit": "learnprogramming",
         "title": "Best resources for learning Python?",
         "sentiment": [
-            {
-                "label": "neutral",
-                "score": 0.5888971090316772
-            }
-        ]
+            [
+                {
+                    "label": "neutral",
+                    "score": 0.5888971090316772
+                },
+                {
+                    "label": "positive",
+                    "score": 0.39520227909088135
+                },
+                {
+                    "label": "negative",
+                    "score": 0.015900639817118645
+                }
+            ]
+        ],
+        "timestamp": "2024-06-01T12:00:00Z"
     },
     {
         "subreddit": "csjobs",
         "title": "Just got fired from my first job, what should I do next?",
         "sentiment": [
-            {
-                "label": "negative",
-                "score": 0.843950092792511
-            }
-        ]
+            [
+                {
+                    "label": "negative",
+                    "score": 0.843950092792511
+                },
+                {
+                    "label": "neutral",
+                    "score": 0.1480497270822525
+                },
+                {
+                    "label": "positive",
+                    "score": 0.00800017174333334
+                }
+            ]
+        ],
+        "timestamp": "2024-06-01T12:00:00Z"
     },
     {
         "subreddit": "programming",
         "title": "Is computer science a good major?",
         "sentiment": [
-            {
-                "label": "neutral",
-                "score": 0.7431588172912598
-            }
-        ]
+            [
+                {
+                    "label": "neutral",
+                    "score": 0.7431588172912598
+                },
+                {
+                    "label": "positive",
+                    "score": 0.21339455246925354
+                },
+                {
+                    "label": "negative",
+                    "score": 0.043446652591228485
+                }
+            ]
+        ],
+        "timestamp": "2024-06-01T12:00:00Z"
     },
     {
         "subreddit": "technology",
         "title": "I'm a vibe coder, AMA",
         "sentiment": [
-            {
-                "label": "neutral",
-                "score": 0.5599079132080078
-            }
-        ]
+            [
+                {
+                    "label": "neutral",
+                    "score": 0.5599079132080078
+                },
+                {
+                    "label": "positive",
+                    "score": 0.4215393662452698
+                },
+                {
+                    "label": "negative",
+                    "score": 0.018552720546722412
+                }
+            ]
+        ],
+        "timestamp": "2024-06-01T12:00:00Z"
     },
     {
         "subreddit": "csprojects",
         "title": "What are some good project ideas for a CS student?",
         "sentiment": [
-            {
-                "label": "neutral",
-                "score": 0.5953803658485413
-            }
-        ]
+            [
+                {
+                    "label": "neutral",
+                    "score": 0.5953803658485413
+                },
+                {
+                    "label": "positive",
+                    "score": 0.38554847240448
+                },
+                {
+                    "label": "negative",
+                    "score": 0.019071176648139954
+                }
+            ]
+        ],
+        "timestamp": "2024-06-01T12:00:00Z"
     }
 ]
