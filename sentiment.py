@@ -5,25 +5,30 @@ import json
 with open("data/sample_posts.json", "r") as f:
     sample_posts = json.load(f)
 
+
 def sentiment():
     # Load the sentiment analysis pipeline using the specified model
     sentiment_analysis = pipeline(task="sentiment-analysis", model="cardiffnlp/twitter-roberta-base-sentiment-latest")
     return sentiment_analysis
 
+def dump_sentiment_results(post_subreddit, post_title, sentiment_results, dump_data):
+    # Create a dictionary to store the subreddit, title, and sentiment results for the post
+    post_dump = {"subreddit": post_subreddit,"title": post_title, "sentiment": sentiment_results}
+    dump_data.append(post_dump)
+    
+    with open("data/filtered_data.json", "w") as f:
+        json.dump(dump_data, f, indent = 4)
+
 if __name__ == "__main__":
     # Grab the sentiment analysis pipeline
     sentiment_analysis = sentiment()
 
-    for post in sample_posts:
-        # Perform sentiment analysis on the post's title and comments print the results
-        result_title = sentiment_analysis(post["title"])
-        
-        print(f"Post Title: {post['title']}")
-        print(f"Sentiment Analysis Result: {result_title}\n")
-        
-        # Loop through all comments and perform sentiment analysis on each comment, print the results
-        for comment in post["comments"]:
-            result_comments = sentiment_analysis(comment)
-            print(f"Comment: {comment}")
-            print(f"Sentiment Analysis Result: {result_comments}\n")
+    # Create an empty list to store the sentiment analysis results for each post
+    dump_data = []
 
+    for post in sample_posts:
+        # Perform sentiment analysis on the post's title, print the results
+        post_subreddit = post["subreddit"]
+        post_title = post["title"]
+        sentiment_results = sentiment_analysis(post["title"])
+        dump_sentiment_results(post_subreddit, post_title, sentiment_results, dump_data)

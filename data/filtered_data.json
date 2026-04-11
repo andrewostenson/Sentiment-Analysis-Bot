@@ -1,0 +1,62 @@
+[
+    {
+        "subreddit": "cscareerquestions",
+        "title": "Likelihood of getting a job after graduating with a CS degree?",
+        "sentiment": [
+            {
+                "label": "neutral",
+                "score": 0.9168084859848022
+            }
+        ]
+    },
+    {
+        "subreddit": "learnprogramming",
+        "title": "Best resources for learning Python?",
+        "sentiment": [
+            {
+                "label": "neutral",
+                "score": 0.5888971090316772
+            }
+        ]
+    },
+    {
+        "subreddit": "csjobs",
+        "title": "Just got fired from my first job, what should I do next?",
+        "sentiment": [
+            {
+                "label": "negative",
+                "score": 0.843950092792511
+            }
+        ]
+    },
+    {
+        "subreddit": "programming",
+        "title": "Is computer science a good major?",
+        "sentiment": [
+            {
+                "label": "neutral",
+                "score": 0.7431588172912598
+            }
+        ]
+    },
+    {
+        "subreddit": "technology",
+        "title": "I'm a vibe coder, AMA",
+        "sentiment": [
+            {
+                "label": "neutral",
+                "score": 0.5599079132080078
+            }
+        ]
+    },
+    {
+        "subreddit": "csprojects",
+        "title": "What are some good project ideas for a CS student?",
+        "sentiment": [
+            {
+                "label": "neutral",
+                "score": 0.5953803658485413
+            }
+        ]
+    }
+]
