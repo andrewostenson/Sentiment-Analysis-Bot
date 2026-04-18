@@ -1,4 +1,5 @@
 import sqlite3
+import pandas as pd
 
 def create_table():
     connection = sqlite3.connect("reddit_posts.db")
@@ -13,3 +14,8 @@ def insert_post(title, subreddit, sentiment, confidence_pos, confidence_neu, con
     cursor.execute("INSERT INTO posts (title, subreddit, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
                    (title, subreddit, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp))
     connection.commit()
+
+def db_to_dataframe():
+    connection = sqlite3.connect("reddit_posts.db")
+    df = pd.read_sql_query("SELECT * FROM posts", connection)
+    return df

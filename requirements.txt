@@ -4,3 +4,4 @@ torch>=2.0.0
 sentencepiece
 protobuf
 pandas>=2.0.0
+streamlit

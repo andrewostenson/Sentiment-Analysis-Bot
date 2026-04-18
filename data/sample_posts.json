@@ -4,66 +4,479 @@
         "subreddit": "cscareerquestions",
         "title": "Likelihood of getting a job after graduating with a CS degree?",
         "body": "Worried about the job market after graduation. How likely is it to get a job with a CS degree?",
-        "comments": [
-            "It's definitely possible, but it depends on your skills, experience, and networking. Make sure to build a strong portfolio and gain relevant experience through internships or projects.",
-            "The job market can be competitive, but there are many opportunities in tech. Focus on developing your skills and applying to a wide range of companies. Don't be discouraged by rejections, it's part of the process."
-        ],
-        "timestamp": "2024-06-01T12:00:00Z"
+        "comments": ["It's tough but possible.", "Network as much as you can."],
+        "timestamp": "2024-06-01T08:00:00Z"
     },
-
     {
         "id": "0002",
-        "subreddit": "learnprogramming",
-        "title": "Best resources for learning Python?",
-        "body": "I'm new to programming and want to learn Python. What are some good resources to get started?",
-        "comments": [
-            "I recommend starting with the official Python documentation and tutorials. There are also many great online courses on platforms like Coursera, Udemy, and Codecademy.",
-            "You can also check out YouTube channels like Corey Schafer and freeCodeCamp for Python tutorials. Practice by working on small projects to apply what you learn."
-        ],
-        "timestamp": "2024-06-01T12:00:00Z"
+        "subreddit": "cscareerquestions",
+        "title": "Just landed my first SWE offer after 200 applications!",
+        "body": "Finally got an offer after months of grinding. Don't give up everyone!",
+        "comments": ["Congrats!", "This gives me hope."],
+        "timestamp": "2024-06-01T14:00:00Z"
     },
     {
         "id": "0003",
-        "subreddit": "csjobs",
-        "title": "Just got fired from my first job, what should I do next?",
-        "body": "Layoffs finally caught up to me, feeling pretty discouraged",
-        "comments": [
-            "This is what happens when the market gets oversatured, you get sold a load of bs about how great its gonna be only to find out this market has been done for for over a decade",
-            "Job market is cooked, sorry dude"
-        ],
-        "timestamp": "2024-06-01T12:00:00Z"
+        "subreddit": "cscareerquestions",
+        "title": "Is it even worth applying anymore? 6 months, no offers.",
+        "body": "I've applied to over 400 jobs and have nothing to show for it.",
+        "comments": ["The market is cooked.", "Hang in there."],
+        "timestamp": "2024-06-15T10:00:00Z"
     },
     {
         "id": "0004",
-        "subreddit": "programming",
-        "title": "Is computer science a good major?",
-        "body": "I'm considering majoring in computer science, but I'm not sure if it's the right choice. What are the pros and cons of studying CS?",
-        "comments": [
-            "Pick anything else man. You'll be happier",
-            "I wish someone had told me to pick something else. Been 2 years and I still can't find a job. The market is really tough right now."
-        ],
-        "timestamp": "2024-06-01T12:00:00Z"
+        "subreddit": "cscareerquestions",
+        "title": "Rejected from Amazon, Google, and Meta in the same week",
+        "body": "I don't know how much more of this I can take. Feeling completely defeated.",
+        "comments": ["FAANG is not everything.", "Keep going, you'll find something."],
+        "timestamp": "2024-06-15T16:00:00Z"
     },
     {
         "id": "0005",
-        "subreddit": "technology",
-        "title": "I'm a vibe coder, AMA",
-        "body": "I just vibe code all day, ask me anything about my experience or the lifestyle!",
-        "comments": [
-            "People like you are what's wrong with the industry. Stop being a leech and actually contribute something meaningful.",
-            "Don't listen to everyone here, it doesn't actually matter. Just do you and keep vibing. The market is tough but if you're happy, that's all that matters."
-        ],
-        "timestamp": "2024-06-01T12:00:00Z"
+        "subreddit": "cscareerquestions",
+        "title": "Tips for negotiating your first offer?",
+        "body": "Got my first offer and not sure if I should negotiate. Any advice?",
+        "comments": ["Always negotiate.", "Do your research on market rates first."],
+        "timestamp": "2024-07-01T09:00:00Z"
     },
     {
         "id": "0006",
-        "subreddit": "csprojects",
-        "title": "What are some good project ideas for a CS student?",
-        "body": "I'm looking for some project ideas to work on as a CS student. Any suggestions?",
-        "comments": [
-            "Awesome! Glad to see someone taking some initivative in this degree!",
-            "Congrats man, glad to see you working hard!"
-        ],
-        "timestamp": "2024-06-01T12:00:00Z"
+        "subreddit": "cscareerquestions",
+        "title": "Market is finally picking up, got 3 interviews this week",
+        "body": "After months of silence, suddenly getting calls. Maybe things are turning around.",
+        "comments": ["Same here!", "Fingers crossed this continues."],
+        "timestamp": "2024-07-01T15:00:00Z"
+    },
+    {
+        "id": "0007",
+        "subreddit": "cscareerquestions",
+        "title": "Should I take a $70k offer or keep waiting?",
+        "body": "It's below market but I've been unemployed for 8 months. Torn on what to do.",
+        "comments": ["Take it and keep looking.", "8 months is a long time, take it."],
+        "timestamp": "2024-07-15T11:00:00Z"
+    },
+    {
+        "id": "0008",
+        "subreddit": "cscareerquestions",
+        "title": "AI is making entry level jobs disappear, this is terrifying",
+        "body": "Every company I talk to says they're using AI to replace junior devs.",
+        "comments": ["Learn AI tooling yourself.", "The market has shifted, adapt or struggle."],
+        "timestamp": "2024-07-15T17:00:00Z"
+    },
+    {
+        "id": "0009",
+        "subreddit": "cscareerquestions",
+        "title": "Finally got a job! 10 months of searching but it happened",
+        "body": "Don't give up. It's brutal out there but it does happen eventually.",
+        "comments": ["Congrats!!", "This is what I needed to hear today."],
+        "timestamp": "2024-08-01T08:00:00Z"
+    },
+    {
+        "id": "0010",
+        "subreddit": "cscareerquestions",
+        "title": "Laid off again. Second time in two years.",
+        "body": "I don't know what to do anymore. This industry feels impossible.",
+        "comments": ["So sorry, this market is brutal.", "You're not alone."],
+        "timestamp": "2024-08-01T14:00:00Z"
+    },
+    {
+        "id": "0011",
+        "subreddit": "cscareerquestions",
+        "title": "How important is leetcode really?",
+        "body": "I've been grinding for 3 months and still bombing interviews. Is it worth it?",
+        "comments": ["It depends on the company.", "For FAANG it's essential unfortunately."],
+        "timestamp": "2024-08-15T10:00:00Z"
+    },
+    {
+        "id": "0012",
+        "subreddit": "cscareerquestions",
+        "title": "Got promoted to senior after 2 years, here's what helped",
+        "body": "Sharing my experience in case it helps anyone else on the same path.",
+        "comments": ["Great write up!", "Thanks for sharing this."],
+        "timestamp": "2024-08-15T16:00:00Z"
+    },
+    {
+        "id": "0013",
+        "subreddit": "learnprogramming",
+        "title": "Best resources for learning Python?",
+        "body": "I'm new to programming and want to learn Python. What are some good resources?",
+        "comments": ["Automate the Boring Stuff is great.", "Try freeCodeCamp."],
+        "timestamp": "2024-06-01T09:00:00Z"
+    },
+    {
+        "id": "0014",
+        "subreddit": "learnprogramming",
+        "title": "Finally understood recursion today, feeling great!",
+        "body": "It clicked after weeks of confusion. Loving this journey.",
+        "comments": ["That feeling is amazing!", "Keep going!"],
+        "timestamp": "2024-06-01T15:00:00Z"
+    },
+    {
+        "id": "0015",
+        "subreddit": "learnprogramming",
+        "title": "Is it too late to start programming at 25?",
+        "body": "Feeling behind everyone who started young.",
+        "comments": ["Never too late.", "25 is nothing, don't worry."],
+        "timestamp": "2024-06-15T10:00:00Z"
+    },
+    {
+        "id": "0016",
+        "subreddit": "learnprogramming",
+        "title": "I've been stuck on this bug for 3 days and I want to quit",
+        "body": "I don't think I'm cut out for this. Nothing makes sense.",
+        "comments": ["Every developer hits this wall.", "Take a break and come back fresh."],
+        "timestamp": "2024-06-15T16:00:00Z"
+    },
+    {
+        "id": "0017",
+        "subreddit": "learnprogramming",
+        "title": "Built my first full stack app, here's what I learned",
+        "body": "Took 3 months but I finally have something to show. So proud of this.",
+        "comments": ["Awesome work!", "Love seeing this kind of progress."],
+        "timestamp": "2024-07-01T09:00:00Z"
+    },
+    {
+        "id": "0018",
+        "subreddit": "learnprogramming",
+        "title": "Why is JavaScript so confusing compared to Python?",
+        "body": "Just started learning JS after Python and I'm completely lost.",
+        "comments": ["JS has a lot of quirks, it gets better.", "Stick with it, it clicks eventually."],
+        "timestamp": "2024-07-01T15:00:00Z"
+    },
+    {
+        "id": "0019",
+        "subreddit": "learnprogramming",
+        "title": "Passed my first technical interview!",
+        "body": "Never thought I'd get here. Hard work pays off.",
+        "comments": ["Let's go!!", "So happy for you."],
+        "timestamp": "2024-07-15T11:00:00Z"
+    },
+    {
+        "id": "0020",
+        "subreddit": "learnprogramming",
+        "title": "Feeling completely overwhelmed by how much there is to learn",
+        "body": "Every time I learn one thing there are ten more things I don't know.",
+        "comments": ["That feeling never goes away honestly.", "Focus on one thing at a time."],
+        "timestamp": "2024-07-15T17:00:00Z"
+    },
+    {
+        "id": "0021",
+        "subreddit": "learnprogramming",
+        "title": "CS degree vs bootcamp, what actually matters to employers?",
+        "body": "Trying to decide the best path into the industry.",
+        "comments": ["Portfolio matters more than either.", "Degree helps for big companies."],
+        "timestamp": "2024-08-01T09:00:00Z"
+    },
+    {
+        "id": "0022",
+        "subreddit": "learnprogramming",
+        "title": "Just got my first freelance client, couldn't be happier",
+        "body": "Starting small but this feels like a huge win.",
+        "comments": ["Amazing!", "First one is always the hardest to get."],
+        "timestamp": "2024-08-01T15:00:00Z"
+    },
+    {
+        "id": "0023",
+        "subreddit": "learnprogramming",
+        "title": "How long did it take you to feel confident as a developer?",
+        "body": "Been coding for a year and still feel like I know nothing.",
+        "comments": ["Imposter syndrome is real.", "Years, honestly. But it gets better."],
+        "timestamp": "2024-08-15T10:00:00Z"
+    },
+    {
+        "id": "0024",
+        "subreddit": "learnprogramming",
+        "title": "Open source contribution changed everything for me",
+        "body": "My skills have grown more in 2 months of OSS than a year of tutorials.",
+        "comments": ["This is the way.", "Great advice for everyone."],
+        "timestamp": "2024-08-15T16:00:00Z"
+    },
+    {
+        "id": "0025",
+        "subreddit": "csmajors",
+        "title": "Is computer science a good major right now?",
+        "body": "Everyone is saying the market is terrible. Should I switch?",
+        "comments": ["Pick anything else.", "It's tough but still worth it long term."],
+        "timestamp": "2024-06-01T08:00:00Z"
+    },
+    {
+        "id": "0026",
+        "subreddit": "csmajors",
+        "title": "Got accepted into my dream CS program!",
+        "body": "So excited to start this fall. Any advice for incoming freshmen?",
+        "comments": ["Start projects early.", "Network from day one."],
+        "timestamp": "2024-06-01T14:00:00Z"
+    },
+    {
+        "id": "0027",
+        "subreddit": "csmajors",
+        "title": "Feeling completely burned out halfway through junior year",
+        "body": "The workload is insane and I'm not sure I'll find a job after.",
+        "comments": ["Junior year is the hardest.", "Take care of yourself first."],
+        "timestamp": "2024-06-15T10:00:00Z"
+    },
+    {
+        "id": "0028",
+        "subreddit": "csmajors",
+        "title": "Failed my algorithms midterm, feeling hopeless",
+        "body": "I studied so hard and still failed. Maybe I'm just not smart enough for this.",
+        "comments": ["One exam doesn't define you.", "Algorithms is brutal, you're not alone."],
+        "timestamp": "2024-06-15T16:00:00Z"
+    },
+    {
+        "id": "0029",
+        "subreddit": "csmajors",
+        "title": "Landed a summer internship at a mid size startup!",
+        "body": "Not FAANG but I'm thrilled. First real experience incoming.",
+        "comments": ["Congrats!", "Startups are great experience."],
+        "timestamp": "2024-07-01T09:00:00Z"
+    },
+    {
+        "id": "0030",
+        "subreddit": "csmajors",
+        "title": "Should I drop CS and switch to data science?",
+        "body": "Heard data science has better job prospects right now. Thoughts?",
+        "comments": ["They overlap a lot.", "Data science is also competitive now."],
+        "timestamp": "2024-07-01T15:00:00Z"
+    },
+    {
+        "id": "0031",
+        "subreddit": "csmajors",
+        "title": "Professor failed half the class on the final. Is this normal?",
+        "body": "Nobody passed with above a 70. The curve saved most of us but barely.",
+        "comments": ["That sounds like a bad professor.", "Unfortunately common in weed out courses."],
+        "timestamp": "2024-07-15T11:00:00Z"
+    },
+    {
+        "id": "0032",
+        "subreddit": "csmajors",
+        "title": "Senior year and finally feeling confident in my skills",
+        "body": "Took a long time but it all started clicking this semester.",
+        "comments": ["Love to hear it!", "Senior year is when it all comes together."],
+        "timestamp": "2024-07-15T17:00:00Z"
+    },
+    {
+        "id": "0033",
+        "subreddit": "csmajors",
+        "title": "Graduated and got a job within a month, here's my advice",
+        "body": "It's possible. Here's what I did differently from my peers.",
+        "comments": ["Amazing, thank you for sharing.", "Bookmarking this."],
+        "timestamp": "2024-08-01T08:00:00Z"
+    },
+    {
+        "id": "0034",
+        "subreddit": "csmajors",
+        "title": "My university career fair was a disaster this year",
+        "body": "Half the companies that signed up didn't show. The ones that did weren't hiring.",
+        "comments": ["Same at my school.", "The market is really showing everywhere."],
+        "timestamp": "2024-08-01T14:00:00Z"
+    },
+    {
+        "id": "0035",
+        "subreddit": "csmajors",
+        "title": "How do you deal with the pressure of finding a job before graduation?",
+        "body": "Family keeps asking and I have nothing to tell them. It's exhausting.",
+        "comments": ["Set boundaries with family.", "You're not alone in this."],
+        "timestamp": "2024-08-15T10:00:00Z"
+    },
+    {
+        "id": "0036",
+        "subreddit": "csmajors",
+        "title": "Built a project that went viral, got 3 recruiter messages today",
+        "body": "Just goes to show what a good portfolio project can do.",
+        "comments": ["What was the project?", "This is the way."],
+        "timestamp": "2024-08-15T16:00:00Z"
+    },
+    {
+        "id": "0037",
+        "subreddit": "softwareengineering",
+        "title": "Just got fired from my first job, what should I do next?",
+        "body": "Layoffs finally caught up to me. Feeling pretty discouraged.",
+        "comments": ["This market is brutal.", "Sorry dude, you'll land somewhere."],
+        "timestamp": "2024-06-01T09:00:00Z"
+    },
+    {
+        "id": "0038",
+        "subreddit": "softwareengineering",
+        "title": "What does a healthy work life balance look like in SWE?",
+        "body": "Curious how people manage their time. Is it actually achievable?",
+        "comments": ["Depends on the company.", "Absolutely achievable at the right place."],
+        "timestamp": "2024-06-01T15:00:00Z"
+    },
+    {
+        "id": "0039",
+        "subreddit": "softwareengineering",
+        "title": "AI is going to replace most SWE jobs within 5 years",
+        "body": "Vibe coding is already putting junior devs out of work.",
+        "comments": ["Hard disagree.", "The junior market is genuinely suffering."],
+        "timestamp": "2024-06-15T10:00:00Z"
+    },
+    {
+        "id": "0040",
+        "subreddit": "softwareengineering",
+        "title": "10 years in the industry, here's what I wish I knew starting out",
+        "body": "Sharing some hard earned lessons for anyone earlier in their career.",
+        "comments": ["This is gold.", "Saving this post."],
+        "timestamp": "2024-06-15T16:00:00Z"
+    },
+    {
+        "id": "0041",
+        "subreddit": "softwareengineering",
+        "title": "Is remote work dying? My company just mandated RTO",
+        "body": "3 days in office starting next month. Pretty frustrated about it.",
+        "comments": ["RTO mandates are everywhere now.", "Start looking for fully remote roles."],
+        "timestamp": "2024-07-01T09:00:00Z"
+    },
+    {
+        "id": "0042",
+        "subreddit": "softwareengineering",
+        "title": "Shipped a feature that saved the company $2M, got a $500 bonus",
+        "body": "I don't even know how to feel about this.",
+        "comments": ["That's insulting.", "Time to update your resume."],
+        "timestamp": "2024-07-01T15:00:00Z"
+    },
+    {
+        "id": "0043",
+        "subreddit": "softwareengineering",
+        "title": "How do you deal with a toxic senior developer?",
+        "body": "My tech lead tears apart every PR I submit in front of the whole team.",
+        "comments": ["Document everything.", "That's not code review, that's bullying."],
+        "timestamp": "2024-07-15T11:00:00Z"
+    },
+    {
+        "id": "0044",
+        "subreddit": "softwareengineering",
+        "title": "Just hit $200k TC for the first time, grateful and shocked",
+        "body": "Came from a non traditional background. If I can do it, you can too.",
+        "comments": ["Congrats!", "Inspiring story."],
+        "timestamp": "2024-07-15T17:00:00Z"
+    },
+    {
+        "id": "0045",
+        "subreddit": "softwareengineering",
+        "title": "My entire team got laid off except me. Survivor guilt is real.",
+        "body": "Not sure how to process this. I liked these people.",
+        "comments": ["That's really hard.", "Take care of yourself through this."],
+        "timestamp": "2024-08-01T09:00:00Z"
+    },
+    {
+        "id": "0046",
+        "subreddit": "softwareengineering",
+        "title": "Code review culture at my new job is incredible",
+        "body": "Never had feedback this constructive before. Makes such a difference.",
+        "comments": ["Great teams make all the difference.", "Hold onto that job."],
+        "timestamp": "2024-08-01T15:00:00Z"
+    },
+    {
+        "id": "0047",
+        "subreddit": "softwareengineering",
+        "title": "Is it worth getting AWS certified in this market?",
+        "body": "Trying to stand out but not sure if certs actually help.",
+        "comments": ["They help more than people say.", "Depends on the role."],
+        "timestamp": "2024-08-15T10:00:00Z"
+    },
+    {
+        "id": "0048",
+        "subreddit": "softwareengineering",
+        "title": "Left big tech for a startup and it was the best decision I ever made",
+        "body": "More ownership, better culture, and actually enjoying work again.",
+        "comments": ["This gives me hope.", "Not all startups are like this but glad you found one."],
+        "timestamp": "2024-08-15T16:00:00Z"
+    },
+    {
+        "id": "0049",
+        "subreddit": "programming",
+        "title": "I'm a vibe coder, AMA",
+        "body": "I just vibe code all day, ask me anything.",
+        "comments": ["People like you are what's wrong with the industry.", "Just do you."],
+        "timestamp": "2024-06-01T08:00:00Z"
+    },
+    {
+        "id": "0050",
+        "subreddit": "programming",
+        "title": "Open source contribution completely changed how I code",
+        "body": "Started contributing 3 months ago and my skills have skyrocketed.",
+        "comments": ["This is the way.", "Looks great on a resume too."],
+        "timestamp": "2024-06-01T14:00:00Z"
+    },
+    {
+        "id": "0051",
+        "subreddit": "programming",
+        "title": "Why does nobody talk about how isolating remote work is?",
+        "body": "Two years in and the loneliness is real.",
+        "comments": ["Yes, huge issue nobody admits.", "You're not alone."],
+        "timestamp": "2024-06-15T10:00:00Z"
+    },
+    {
+        "id": "0052",
+        "subreddit": "programming",
+        "title": "Rust is incredible and I don't understand why everyone avoids it",
+        "body": "Yes the learning curve is steep but the payoff is worth it.",
+        "comments": ["The borrow checker broke me.", "Love Rust, agree completely."],
+        "timestamp": "2024-06-15T16:00:00Z"
+    },
+    {
+        "id": "0053",
+        "subreddit": "programming",
+        "title": "Hot take: most code reviews are a waste of time",
+        "body": "Half the comments are style opinions that don't matter.",
+        "comments": ["Hard disagree.", "Depends on your team culture."],
+        "timestamp": "2024-07-01T09:00:00Z"
+    },
+    {
+        "id": "0054",
+        "subreddit": "programming",
+        "title": "Just released my first open source library, 200 stars in a day",
+        "body": "Never expected this kind of response. Feels amazing.",
+        "comments": ["Congrats!", "What does it do?"],
+        "timestamp": "2024-07-01T15:00:00Z"
+    },
+    {
+        "id": "0055",
+        "subreddit": "programming",
+        "title": "Why is legacy code always such a nightmare?",
+        "body": "Just inherited a codebase with zero documentation and no tests.",
+        "comments": ["Welcome to the industry.", "Document as you go, it's the only way."],
+        "timestamp": "2024-07-15T11:00:00Z"
+    },
+    {
+        "id": "0056",
+        "subreddit": "programming",
+        "title": "Pair programming with AI is genuinely changing how I work",
+        "body": "Not replacing me, just making me faster. It's a great tool.",
+        "comments": ["Same experience here.", "Learn to use it well and you're unstoppable."],
+        "timestamp": "2024-07-15T17:00:00Z"
+    },
+    {
+        "id": "0057",
+        "subreddit": "programming",
+        "title": "Got burned out and took a month off. Here's what I learned.",
+        "body": "Best decision I ever made. Came back a better developer.",
+        "comments": ["Rest is productive.", "Glad you took care of yourself."],
+        "timestamp": "2024-08-01T09:00:00Z"
+    },
+    {
+        "id": "0058",
+        "subreddit": "programming",
+        "title": "This industry chews people up and spits them out",
+        "body": "Third burnout in five years. Not sure how much longer I can do this.",
+        "comments": ["Please prioritize your health.", "The industry has a serious burnout problem."],
+        "timestamp": "2024-08-01T15:00:00Z"
+    },
+    {
+        "id": "0059",
+        "subreddit": "programming",
+        "title": "What programming language should I learn in 2024?",
+        "body": "Trying to stay relevant in this market. Any recommendations?",
+        "comments": ["Python and TypeScript are safe bets.", "Depends on what you want to build."],
+        "timestamp": "2024-08-15T10:00:00Z"
+    },
+    {
+        "id": "0060",
+        "subreddit": "programming",
+        "title": "Shipped a side project that got picked up by a startup",
+        "body": "They want to license it. Never thought this would happen from a weekend project.",
+        "comments": ["That's incredible!", "Build in public, this is why."],
+        "timestamp": "2024-08-15T16:00:00Z"
     }
 ]
