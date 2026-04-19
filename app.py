@@ -3,18 +3,11 @@ import database
 
 st.title("Streamlit App for Sentiment Analysis")
 
-# Create a dropdown to select a subreddit for filtering the displayed data
-selected_subreddit = st.selectbox("Select a subreddit to filter by:", options=["All","cscareerquestions", "learnprogramming", "csjobs", 
-    "programming", "technology", "csprojects", "csmajors", "softwareengineering"])
-
 selected_sentiment = st.selectbox("Select a sentiment to filter by:", options=["All", "positive", "neutral", "negative"])
 
 # Fetch data from the database and convert it to a DataFrame
 data = database.db_to_dataframe()
 
-# Filter the DataFrame based on the selected subreddit
-if selected_subreddit != "All":
-    data = data[data['subreddit'] == selected_subreddit]
 
 # Filter the DataFrame based on the selected sentiment
 if selected_sentiment != "All":
@@ -33,4 +26,13 @@ data_dict = {
     "negative": 'confidence_neg'
 }
 
-st.line_chart(data[[data_dict.get(selected_sentiment), 'timestamp']], x="timestamp", width=0, use_container_width=True)
+if selected_sentiment == 'All':
+        st.line_chart(data[
+             ['confidence_pos', 
+              'confidence_neu', 
+              'confidence_neg', 
+              'timestamp']
+              ], x = "timestamp", width = 0, use_container_width=True)
+
+else:
+    st.line_chart(data[[data_dict.get(selected_sentiment), 'timestamp']], x = "timestamp", width = 0, use_container_width = True)
