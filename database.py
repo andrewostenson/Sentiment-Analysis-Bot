@@ -15,6 +15,12 @@ def insert_post(title, subreddit, sentiment, confidence_pos, confidence_neu, con
                    (title, subreddit, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp))
     connection.commit()
 
+def delete_all_posts():
+    connection = sqlite3.connect("data.db")
+    cursor = connection.cursor()
+    cursor.execute("DELETE FROM posts")
+    connection.commit()
+
 def db_to_dataframe():
     connection = sqlite3.connect("data.db")
     df = pd.read_sql_query("SELECT * FROM posts", connection)
