@@ -21,6 +21,29 @@ def delete_all_posts():
     cursor.execute("DELETE FROM posts")
     connection.commit()
 
+def fetch_filtered_posts(start_date=None, end_date=None, sentiment_filter=None, keyword_filter=None):
+    connection = sqlite3.connect("data.db")
+
+    query = "SELECT * FROM posts WHERE 1=1"
+    params = []
+
+    if start_date and end_date:
+        query += " AND timestamp BETWEEN ? AND ?"
+        params.extend([start_date, end_date])
+    
+    if sentiment_filter and sentiment_filter != "All":
+        query += " AND sentiment = ?"
+        params.append(sentiment_filter)
+    
+    if keyword_filter:
+        query += " AND (title LIKE ? OR source LIKE ?)"
+        keyword_param = f"%{keyword_filter}%"
+        params.extend([keyword_param, keyword_param])
+    
+    df = pd.read_sql_query(query, connection, params=params)
+    return df
+
+
 def db_to_dataframe():
     connection = sqlite3.connect("data.db")
     df = pd.read_sql_query("SELECT * FROM posts", connection)

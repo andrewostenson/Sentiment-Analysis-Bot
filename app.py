@@ -1,10 +1,13 @@
 import streamlit as st
 import database
 import main
+import datetime
 
+# Variable initialization
+today = datetime.date.today()
+week_ago = today - datetime.timedelta(days=7)
 
 st.title("Streamlit App for Sentiment Analysis")
-selected_sentiment = st.selectbox("Select a sentiment to filter by:", options=["All", "positive", "neutral", "negative"])
 
 cols = st.columns(3)
 
@@ -21,8 +24,25 @@ with cols[1]:
 with cols[2]:
      view = st.toggle("Advanced View")
 
+selected_sentiment = st.selectbox("Select a sentiment to filter by:", options=["All", "positive", "neutral", "negative"])
+
+date_range = st.date_input(
+    "Select a date range to filter the data:",
+    (week_ago, today),
+    format="MM.DD.YYYY",
+)
+
+keyword_search = st.text_input("Search by title or source:")
+
+filtered_data = database.fetch_filtered_posts(
+    start_date=date_range[0],
+    end_date=date_range[1],
+    sentiment_filter=selected_sentiment if selected_sentiment != "All" else None,
+    keyword_filter=keyword_search if keyword_search else None
+)
+
 # Fetch data from the database and convert it to a DataFrame, then create a copy of the DataFrame for display purposes
-chart_data = database.db_to_dataframe()
+chart_data = filtered_data.copy()
 table_data = chart_data.copy()
 
 # Filter the DataFrame based on the selected sentiment
