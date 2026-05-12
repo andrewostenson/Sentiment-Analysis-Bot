@@ -8,11 +8,11 @@ def create_table():
     "confidence_pos REAL, confidence_neu REAL, confidence_neg REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)")
     connection.commit()
 
-def insert_post(title, subreddit, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp):
+def insert_post(title, source, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp):
     connection = sqlite3.connect("data.db")
     cursor = connection.cursor()
     cursor.execute("INSERT INTO posts (title, source, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                   (title, subreddit, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp))
+                   (title, source, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp))
     connection.commit()
 
 def delete_all_posts():

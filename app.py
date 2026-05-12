@@ -2,6 +2,7 @@ import streamlit as st
 import database
 import main
 import datetime
+import time
 
 # Variable initialization
 today = datetime.date.today()
@@ -14,7 +15,10 @@ cols = st.columns(3)
 with cols[0]:
     if st.button("Run Scraper and Sentiment Analysis"):
         # Run the scraper and sentiment analysis
+        start = time.perf_counter()
         main.run()
+        end = time.perf_counter()
+        st.toast(f"Scraping and sentiment analysis completed in {end - start:.2f} seconds")
 
 with cols[1]:
     # Clear all posts if the clear data button is clicked
