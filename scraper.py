@@ -8,7 +8,16 @@ keywords = ['hiring', 'job', 'career', 'position', 'opportunity', 'vacancy', 're
                 'job search', 'job hunting', 'career development', 'career growth', 'career advancement', 'career change',
                 'Google', 'Microsoft', 'Amazon', 'Facebook', 'Meta', 'Apple', 'Netflix', 'Tesla', 'NVIDIA', 'IBM', 'Intel', 'Salesforce',
                 'Oracle', 'SAP', 'Adobe', 'Twitter', 'LinkedIn', 'Uber', 'Airbnb', 'Spotify', 'Dropbox', 'Slack', 'Zoom',
-                'GitHub', 'GitLab', 'Atlassian', 'Stripe', 'Square', 'PayPal', 'Shopify', 'Twilio', 'Cloudflare', 'Reddit',]
+                'GitHub', 'GitLab', 'Atlassian', 'Stripe', 'Square', 'PayPal', 'Shopify', 'Twilio', 'Cloudflare', 'Reddit',
+                'AI', 'Artificial Intelligence', 'Machine Learning', 'Deep Learning', 'Data Science', 'Big Data', 'Analytics',
+                'Cloud Computing', 'DevOps', 'Cybersecurity', 'Blockchain', 'Cryptocurrency', 'Fintech', 'Healthtech', 'Edtech',
+                'SaaS', 'PaaS', 'IaaS', 'Open Source', 'Programming', 'Software Development', 'Web Development', 'Mobile Development', 'Game Development',
+                'Python', 'JavaScript', 'Java', 'C#', 'C++', 'Go', 'Rust', 'Ruby', 'PHP', 'Swift', 'Kotlin', 'TypeScript',
+                'React', 'Angular', 'Vue', 'Django', 'Flask', 'Spring', 'Node.js', 'Express', 'GraphQL', 'REST API', 'Microservices',
+                'Docker', 'Kubernetes', 'AWS', 'Azure', 'Google Cloud', 'Heroku', 'DigitalOcean', 'Vercel', 'Netlify', 'Firebase', 'Serverless',
+                'Agile', 'Scrum', 'Kanban', 'Project Management', 'Product Management', 'UX/UI Design', 'Design Thinking', 'User Experience', 'User Interface',
+                'Remote Work', 'Work From Home', 'WFH', 'Distributed Teams', 'Virtual Teams', 'Remote Jobs', 'Remote Opportunities', 'Remote Careers', 'Remote Positions', 'Remote Hiring',
+                'Diversity', 'Inclusion', 'Equity', 'DEI', 'LLM', 'Large Language Models', 'ChatGPT', 'GPT-3', 'GPT-4', 'AI Ethics', 'AI Bias', 'AI Regulation', 'AI Governance']
     
 
 # Scraper functions for Hacker News
@@ -40,3 +49,13 @@ def scrape_top_stories_DEV():
     response = requests.get('https://dev.to/api/articles?tag=keywords&per_page=100')
     data = response.json()
     return data
+
+#Scraper functions for Lobsters
+def scrape_top_stories_Lobsters():
+    response = requests.get('https://lobste.rs/newest.json')
+    data = response.json()
+    return data
+
+def filter_relevant_stories_Lobsters(story):
+    title = story.get('title', '')
+    return any(keyword in title for keyword in keywords)
