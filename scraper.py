@@ -52,7 +52,7 @@ def scrape_top_stories_DEV():
 
 #Scraper functions for Lobsters
 def scrape_top_stories_Lobsters():
-    response = requests.get('https://lobste.rs/newest.json')
+    response = requests.get('https://lobste.rs/hottest.json')
     data = response.json()
     return data
 
