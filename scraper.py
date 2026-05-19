@@ -52,7 +52,7 @@ def filter_story_HN(story):
 
 # Scraper functions for DEV
 def scrape_top_stories_DEV():
-    response = requests.get('https://dev.to/api/articles?tag=career &per_page=100')
+    response = requests.get('https://dev.to/api/articles?tag=career&per_page=100')
     for article in response.json():
         article['title'] = article['title'].lower()
     data = response.json()
