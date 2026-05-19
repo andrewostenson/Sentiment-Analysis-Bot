@@ -30,14 +30,11 @@ def run():
                 sentiment_dict.get('positive', 0), sentiment_dict.get('neutral', 0), sentiment_dict.get('negative', 0), 
                 filtered_HN["time"])
             
-    print(f"DEV stories fetched: {len(top_stories_DEV)}")
     # Process DEV stories
     for story in top_stories_DEV:
         story["source"] = 'DEV'
         story_sentiment = sm.run_sentiment(story["title"])
         sentiment_dict = {}
-
-        print(f"Published at: {story['published_at']}")
 
         for result in story_sentiment[0]:
             sentiment_dict[result['label']] = result['score']
@@ -48,8 +45,6 @@ def run():
             story_sentiment[0][0]['label'], 
             sentiment_dict.get('positive', 0), sentiment_dict.get('neutral', 0), sentiment_dict.get('negative', 0), 
             story["published_at"])
-        dev_counter += 1
-    print(f"Processed {dev_counter} DEV stories")
     
     # Process Lobsters stories
     for story_lobster in top_stories_Lobsters:
