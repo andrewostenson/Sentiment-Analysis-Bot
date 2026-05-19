@@ -7,6 +7,9 @@ def run():
     top_stories_HN = sc.scrape_top_stories_HN()
     top_stories_DEV = sc.scrape_top_stories_DEV()
     top_stories_Lobsters = sc.scrape_top_stories_Lobsters()
+    hn_counter = 0
+    dev_counter = 0
+    lobster_counter = 0
 
     # Process Hacker News stories
     for id in top_stories_HN:
@@ -27,11 +30,14 @@ def run():
                 sentiment_dict.get('positive', 0), sentiment_dict.get('neutral', 0), sentiment_dict.get('negative', 0), 
                 filtered_HN["time"])
             
+    print(f"DEV stories fetched: {len(top_stories_DEV)}")
     # Process DEV stories
     for story in top_stories_DEV:
         story["source"] = 'DEV'
         story_sentiment = sm.run_sentiment(story["title"])
         sentiment_dict = {}
+
+        print(f"Published at: {story['published_at']}")
 
         for result in story_sentiment[0]:
             sentiment_dict[result['label']] = result['score']
@@ -42,6 +48,8 @@ def run():
             story_sentiment[0][0]['label'], 
             sentiment_dict.get('positive', 0), sentiment_dict.get('neutral', 0), sentiment_dict.get('negative', 0), 
             story["published_at"])
+        dev_counter += 1
+    print(f"Processed {dev_counter} DEV stories")
     
     # Process Lobsters stories
     for story_lobster in top_stories_Lobsters:

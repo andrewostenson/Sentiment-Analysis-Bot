@@ -5,13 +5,13 @@ def create_table():
     connection = sqlite3.connect("data.db")
     cursor = connection.cursor()
     cursor.execute("CREATE TABLE IF NOT EXISTS posts (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, source TEXT, sentiment TEXT, " \
-    "confidence_pos REAL, confidence_neu REAL, confidence_neg REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)")
+    "confidence_pos REAL, confidence_neu REAL, confidence_neg REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, UNIQUE(title, source))")
     connection.commit()
 
 def insert_post(title, source, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp):
     connection = sqlite3.connect("data.db")
     cursor = connection.cursor()
-    cursor.execute("INSERT INTO posts (title, source, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
+    cursor.execute("INSERT OR IGNORE INTO posts (title, source, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
                    (title, source, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp))
     connection.commit()
 

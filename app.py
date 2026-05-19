@@ -4,11 +4,13 @@ import main
 import datetime
 import time
 
+database.create_table()
+
 # Variable initialization
 today = datetime.date.today()
-week_ago = today - datetime.timedelta(days=7)
+year_ago = today - datetime.timedelta(days=365)
 
-st.title("Streamlit App for Sentiment Analysis")
+st.title("Job Market Sentiment Analysis and Health")
 
 cols = st.columns(3)
 
@@ -32,11 +34,13 @@ selected_sentiment = st.selectbox("Select a sentiment to filter by:", options=["
 
 date_range = st.date_input(
     "Select a date range to filter the data:",
-    (week_ago, today),
+    (year_ago, today),
     format="MM.DD.YYYY",
 )
 
 keyword_search = st.text_input("Search by title or source:")
+
+
 
 filtered_data = database.fetch_filtered_posts(
     start_date=date_range[0],
