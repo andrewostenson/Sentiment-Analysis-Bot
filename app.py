@@ -3,8 +3,17 @@ import database
 import main
 import datetime
 import time
+import scheduler
 
 database.create_table()
+
+#Run scheduler.py on startup, only once using session state
+if 'scheduler_started' not in st.session_state:
+    st.session_state.scheduler_started = True
+    try:
+        scheduler.job.start()
+    except Exception:
+        pass
 
 # Variable initialization
 today = datetime.date.today()
