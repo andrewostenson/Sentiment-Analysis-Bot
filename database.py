@@ -1,50 +1,54 @@
-import sqlite3
+import psycopg
 import pandas as pd
 
+
+conn = psycopg.connect(
+    host="aws-1-us-east-2.pooler.supabase.com",
+    port=6543,
+    dbname="postgres",
+    user="postgres.uyzefqqirmiergmdxsre",
+    password="Bagelb1tes1!",
+    sslmode="require"
+)
+
 def create_table():
-    connection = sqlite3.connect("data.db")
-    cursor = connection.cursor()
-    cursor.execute("CREATE TABLE IF NOT EXISTS posts (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, source TEXT, sentiment TEXT, " \
-    "confidence_pos REAL, confidence_neu REAL, confidence_neg REAL, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, UNIQUE(title, source))")
-    connection.commit()
+    cursor = conn.cursor()
+    cursor.execute("CREATE TABLE IF NOT EXISTS posts (id SERIAL PRIMARY KEY, title TEXT, source TEXT, sentiment TEXT, " \
+    "confidence_pos REAL, confidence_neu REAL, confidence_neg REAL, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP, UNIQUE(title, source))")
+    conn.commit()
 
 def insert_post(title, source, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp):
-    connection = sqlite3.connect("data.db")
-    cursor = connection.cursor()
-    cursor.execute("INSERT OR IGNORE INTO posts (title, source, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)",
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO posts (title, source, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp) VALUES (%s, %s, %s, %s, %s, %s, %s) ON CONFLICT (title, source) DO NOTHING",
                    (title, source, sentiment, confidence_pos, confidence_neu, confidence_neg, timestamp))
-    connection.commit()
+    conn.commit()
 
 def delete_all_posts():
-    connection = sqlite3.connect("data.db")
-    cursor = connection.cursor()
+    cursor = conn.cursor()
     cursor.execute("DELETE FROM posts")
-    connection.commit()
+    conn.commit()
 
 def fetch_filtered_posts(start_date=None, end_date=None, sentiment_filter=None, keyword_filter=None):
-    connection = sqlite3.connect("data.db")
-
     query = "SELECT * FROM posts WHERE 1=1"
     params = []
 
     if start_date and end_date:
-        query += " AND timestamp BETWEEN ? AND ?"
+        query += " AND timestamp BETWEEN %s AND %s"
         params.extend([start_date, end_date])
     
     if sentiment_filter and sentiment_filter != "All":
-        query += " AND sentiment = ?"
+        query += " AND sentiment = %s"
         params.append(sentiment_filter)
     
     if keyword_filter:
-        query += " AND (title LIKE ? OR source LIKE ?)"
+        query += " AND (title ILIKE %s OR source ILIKE %s)"
         keyword_param = f"%{keyword_filter}%"
         params.extend([keyword_param, keyword_param])
     
-    df = pd.read_sql_query(query, connection, params=params)
+    df = pd.read_sql_query(query, conn, params=params)
     return df
 
 
 def db_to_dataframe():
-    connection = sqlite3.connect("data.db")
-    df = pd.read_sql_query("SELECT * FROM posts", connection)
+    df = pd.read_sql_query("SELECT * FROM posts", conn)
     return df
