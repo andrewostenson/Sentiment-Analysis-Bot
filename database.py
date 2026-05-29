@@ -1,15 +1,9 @@
 import psycopg
+import os
 import pandas as pd
 
 
-conn = psycopg.connect(
-    host="aws-1-us-east-2.pooler.supabase.com",
-    port=6543,
-    dbname="postgres",
-    user="postgres.uyzefqqirmiergmdxsre",
-    password="Bagelb1tes1!",
-    sslmode="require"
-)
+conn = psycopg.connect(os.environ.get('DATABASE_URL'))
 
 def create_table():
     cursor = conn.cursor()
