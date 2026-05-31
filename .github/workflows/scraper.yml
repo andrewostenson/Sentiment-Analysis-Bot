@@ -21,6 +21,9 @@ jobs:
               with:
                 token: ${{ secrets.DOPPLER_TOKEN }}
 
+            - name: Authenticate with Doppler
+              run: doppler configure set token ${{ secrets.DOPPLER_TOKEN }}
+
             - name: Run main.py with Doppler
               run: |
                 # Install dependencies
