@@ -1,0 +1,30 @@
+on:
+    schedule:
+        - cron: '0 */3 * * *' # Runs every 3 hours
+    workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+
+    scraper:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                python-version: '3.14'
+
+            - name: Doppler Login
+              uses: dopplerhq/cli-action@v1
+              with:
+                token: ${{ secrets.DOPPLER_TOKEN }}
+
+            - name: Run scraper
+              run: |
+                # Install dependencies
+                pip install -r requirements.txt
+                
+                # Run the scraper script
+                doppler run -- python main.py
