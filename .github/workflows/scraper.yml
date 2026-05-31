@@ -21,7 +21,7 @@ jobs:
               with:
                 token: ${{ secrets.DOPPLER_TOKEN }}
 
-            - name: Run scraper
+            - name: Run main.py with Doppler
               run: |
                 # Install dependencies
                 pip install -r requirements.txt
