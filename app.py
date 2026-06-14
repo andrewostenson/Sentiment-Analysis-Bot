@@ -39,7 +39,7 @@ st.title("Job Market Sentiment Analysis")
 st.subheader("Weekly Sentiment Overview")
 
 if this_week_sentiment is not None and last_week_sentiment is not None:
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
 
     sentiment_change = this_week_sentiment - last_week_sentiment
     percent_change = (sentiment_change / abs(last_week_sentiment)) * 100 if last_week_sentiment != 0 else 0
@@ -50,6 +50,8 @@ if this_week_sentiment is not None and last_week_sentiment is not None:
         st.metric(label="This Week's Average Sentiment", value=f"{this_week_sentiment:.4f}")
     with col3:
         st.metric(label="Sentiment Change (%)", value=f"{percent_change:.2f}%")
+    with col4:
+        st.metric(label="Market Health", value="Improving" if sentiment_change > 0.02 else "Declining" if sentiment_change < -0.02 else "Stable")
 else:
     st.write("Not enough data to calculate sentiment change from last week.")
 
