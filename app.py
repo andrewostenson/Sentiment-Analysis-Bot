@@ -1,25 +1,36 @@
 import streamlit as st
 import database
-import main
 import datetime
-import time
-import scheduler
+import analytics as an
 
 database.create_table()
 
-#Run scheduler.py on startup, only once using session state
-if 'scheduler_started' not in st.session_state:
-    st.session_state.scheduler_started = True
-    try:
-        scheduler.job.start()
-    except Exception:
-        pass
 
 # Variable initialization
 today = datetime.date.today()
+today_week_start = today - datetime.timedelta(days=7)
+last_week_start = today - datetime.timedelta(days=14)
 year_ago = today - datetime.timedelta(days=365)
 
 st.title("Job Market Sentiment Analysis and Health")
+
+this_week_sentiment = an.average_sentiment(start_date=today_week_start, end_date=today)
+last_week_sentiment = an.average_sentiment(start_date=last_week_start, end_date=today_week_start)
+
+if this_week_sentiment is not None and last_week_sentiment is not None:
+    col1, col2, col3 = st.columns(3)
+
+    sentiment_change = this_week_sentiment - last_week_sentiment
+    percent_change = (sentiment_change / abs(last_week_sentiment)) * 100 if last_week_sentiment != 0 else 0
+
+    with col1:
+        st.metric(label="Last Week's Average Sentiment", value=f"{last_week_sentiment:.4f}")
+    with col2:
+        st.metric(label="This Week's Average Sentiment", value=f"{this_week_sentiment:.4f}")
+    with col3:
+        st.metric(label="Sentiment Change (%)", value=f"{percent_change:.2f}%")
+else:
+    st.write("Not enough data to calculate sentiment change from last week.")
 
 selected_sentiment = st.selectbox("Select a sentiment to filter by:", options=["All", "positive", "neutral", "negative"])
 
