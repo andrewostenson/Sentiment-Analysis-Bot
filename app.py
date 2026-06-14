@@ -10,12 +10,33 @@ database.create_table()
 today = datetime.date.today()
 today_week_start = today - datetime.timedelta(days=7)
 last_week_start = today - datetime.timedelta(days=14)
-year_ago = today - datetime.timedelta(days=365)
 
-st.title("Job Market Sentiment Analysis and Health")
+week_ago = today - datetime.timedelta(days=7)
+month_ago = today - datetime.timedelta(days=30)
+year_ago = today - datetime.timedelta(days=365)
 
 this_week_sentiment = an.average_sentiment(start_date=today_week_start, end_date=today)
 last_week_sentiment = an.average_sentiment(start_date=last_week_start, end_date=today_week_start)
+
+highest_positive_stories = an.highest_scored_stories(start_date=week_ago, end_date=today, sentiment_type="positive")
+highest_negative_stories = an.highest_scored_stories(start_date=week_ago, end_date=today, sentiment_type="negative")
+
+date_range_dict = {
+    "Last 7 days": (week_ago, today),
+    "Last 30 days": (month_ago, today),
+    "Last 365 days": (year_ago, today)
+}
+
+chart_data_dict = {
+    "positive": 'confidence_pos',
+    "neutral": 'confidence_neu',
+    "negative": 'confidence_neg'
+}
+
+# Display Streamlit app
+st.title("Job Market Sentiment Analysis")
+
+st.subheader("Weekly Sentiment Overview")
 
 if this_week_sentiment is not None and last_week_sentiment is not None:
     col1, col2, col3 = st.columns(3)
@@ -32,19 +53,32 @@ if this_week_sentiment is not None and last_week_sentiment is not None:
 else:
     st.write("Not enough data to calculate sentiment change from last week.")
 
+
+st.subheader("Top Positive Stories This Week")
+
+if highest_positive_stories is not None and not highest_positive_stories.empty:
+    st.dataframe(highest_positive_stories[['title', 'source', 'confidence_pos']])
+else:
+    st.write("No positive stories found in the last week.")
+
+st.subheader("Top Negative Stories This Week")
+
+if highest_negative_stories is not None and not highest_negative_stories.empty:
+    st.dataframe(highest_negative_stories[['title', 'source', 'confidence_neg']])
+else:
+    st.write("No negative stories found in the last week.")
+
+st.subheader("Filter and Explore Data")
+
 selected_sentiment = st.selectbox("Select a sentiment to filter by:", options=["All", "positive", "neutral", "negative"])
 
-date_range = st.date_input(
-    "Select a date range to filter the data:",
-    (year_ago, today),
-    format="MM.DD.YYYY",
-)
+date_range = st.selectbox("Select a date range:", options=["Last 7 days", "Last 30 days", "Last 365 days"], index=0)
 
 keyword_search = st.text_input("Search by title or source:")
 
 filtered_data = database.fetch_filtered_posts(
-    start_date=date_range[0],
-    end_date=date_range[1],
+    start_date=date_range_dict[date_range][0],
+    end_date=date_range_dict[date_range][1],
     sentiment_filter= None,
     keyword_filter=keyword_search if keyword_search else None
 )
@@ -66,13 +100,6 @@ st.dataframe(table_data)
 # Group the data by timestamp and calculate the mean of the confidence scores for each sentiment category
 chart_data = chart_data.groupby('timestamp')[['confidence_pos', 'confidence_neu', 'confidence_neg']].mean().reset_index() # Reset the index to make 'timestamp' a column again
 
-
-# Create a mapping of sentiment labels to their corresponding confidence score columns
-chart_data_dict = {
-    "positive": 'confidence_pos',
-    "neutral": 'confidence_neu',
-    "negative": 'confidence_neg'
-}
 
 if selected_sentiment == 'All':
         st.line_chart(chart_data[
