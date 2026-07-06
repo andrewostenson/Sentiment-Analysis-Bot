@@ -30,6 +30,8 @@ keywords = [
 def scrape_top_stories_HN():
     best_response = requests.get('https://hacker-news.firebaseio.com/v0/beststories.json?print=pretty')
     top_response = requests.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
+    print(best_response.status_code)
+    print(top_response.status_code)
     data = best_response.json() + top_response.json()
     return data
 
@@ -55,12 +57,14 @@ def scrape_top_stories_DEV():
     response = requests.get('https://dev.to/api/articles?tag=career&per_page=100')
     for article in response.json():
         article['title'] = article['title'].lower()
+        print(response.status_code)
     data = response.json()
     return data
 
 #Scraper functions for Lobsters
 def scrape_top_stories_Lobsters():
     response = requests.get('https://lobste.rs/hottest.json')
+    print(response.status_code)
     data = response.json()
     return data
 
