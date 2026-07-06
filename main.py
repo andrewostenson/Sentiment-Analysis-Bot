@@ -63,3 +63,6 @@ def run():
                 story_sentiment[0][0]['label'], 
                 sentiment_dict.get('positive', 0), sentiment_dict.get('neutral', 0), sentiment_dict.get('negative', 0), 
                 story_lobster["created_at"])
+
+if __name__ == "__main__":
+    run()
