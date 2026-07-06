@@ -3,6 +3,7 @@ import sentiment as sm
 import database as db
 
 def run():
+    print("Starting the scraping and sentiment analysis process...")
     db.create_table()
     top_stories_HN = sc.scrape_top_stories_HN()
     top_stories_DEV = sc.scrape_top_stories_DEV()
@@ -23,6 +24,7 @@ def run():
             for result in story_sentiment[0]:
                 sentiment_dict[result['label']] = result['score']
 
+            print("Instering HN story")
             db.insert_post(
                 filtered_HN["title"], 
                 filtered_HN["source"], 
@@ -39,6 +41,7 @@ def run():
         for result in story_sentiment[0]:
             sentiment_dict[result['label']] = result['score']
 
+        print("Inserting DEV story")
         db.insert_post(
             story["title"], 
             story["source"], 
@@ -57,6 +60,7 @@ def run():
             for result in story_sentiment[0]:
                 sentiment_dict[result['label']] = result['score']
 
+            print("Inserting Lobsters story")
             db.insert_post(
                 story_lobster["title"], 
                 story_lobster["source"], 
