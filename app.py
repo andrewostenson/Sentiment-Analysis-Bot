@@ -2,6 +2,7 @@ import streamlit as st
 import database
 import datetime
 import analytics as an
+import pandas as pd
 
 database.create_table()
 
@@ -100,6 +101,7 @@ if not view:
 st.dataframe(table_data)
 
 # Group the data by timestamp and calculate the mean of the confidence scores for each sentiment category
+chart_data['timestamp'] = pd.to_datetime(chart_data['timestamp']).dt.date
 chart_data = chart_data.groupby('timestamp')[['confidence_pos', 'confidence_neu', 'confidence_neg']].mean().reset_index() # Reset the index to make 'timestamp' a column again
 
 
